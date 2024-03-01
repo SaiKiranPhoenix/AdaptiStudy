@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaptiStudy - Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            background-image: url("images/bg.jpg");
+            background-size: cover;
+            backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+        }
+
+        .dashboard-container {
+            padding: 20px;
+        }
+
+        .dashboard-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .dashboard-item {
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+
+        .dashboard-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .dashboard-item-content {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AdaptiStudy - Dashboard</h1>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="dashboard-content">
+
+            <!-- Dashboard items -->
+            <div class="dashboard-item">
+                <img src="images/dashboard_item_1.jpg" alt="Dashboard Item 1">
+                <div class="dashboard-item-content">
+                    <h2>Recent Activity</h2>
+                    <p>View your recent learning activities and progress.</p>
+                </div>
+            </div>
+
+            <div class="dashboard-item">
+                <img src="images/dashboard_item_2.jpg" alt="Dashboard Item 2">
+                <div class="dashboard-item-content">
+                    <h2>Course Recommendations</h2>
+                    <p>Discover new courses based on your preferences and interests.</p>
+                </div>
+            </div>
+
+            <!-- Add more dashboard items as needed -->
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn SQL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            color: #008080;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        section:hover {
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #008080;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SQL</h1>
+<a href="https://roadmap.sh/sql">Click here for the full roadmap of SQL</a>
+<section id="section1" onclick="incrementClickCount('section1')">
+    <h2>Video links...</h2>
+    <a href="https://www.youtube.com/watch?v=hlGoQC332VM&t=19s">Apna College</a><br>
+    <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY&t=1939s">FreeCodeCamp.org</a><br>
+    <a href="https://www.youtube.com/watch?v=qlkS-e5ym1w">Sumit Mittal</a><br>
+</section>
+
+<section id="section2" onclick="incrementClickCount('section2')">
+    <h2>Podcast links...</h2>
+    <a href="https://open.spotify.com/episode/1dvN3gMt1SFrb3mM6YAklR?si=K4VRthnETESIyyCb2zI3GQ&utm_source=copy-link">Spotify</a><br>
+</section>
+
+<section id="section3" onclick="incrementClickCount('section3')">
+    <h2>Java Challenge links...</h2>
+    <a href="https://www.sololearn.com/learn/courses/sql-introduction">SoloLearn</a><br>
+    <a href="https://www.hackerrank.com/domains/sql">Hackerrank</a><br>
+</section>
+
+<section id="section4" onclick="incrementClickCount('section4')">
+    <h2>Content and notes links...</h2>
+    <a href="https://www.w3schools.com/sql/">W3Schools</a><br>
+    <a href="https://www.sqltutorial.org/">SQL Tutorial</a><br>
+    <a href="https://www.tutorialspoint.com/sql/index.htm">Tutorialspoint</a><br>
+</section>
+
+<script>
+    // Object to store click counts for each section
+    var pred = "{{prediction}}";
+    if (pred == "Visual") {
+        var clickCounts = {
+            section1: 0,
+            section2: -3,
+            section3: -5,
+            section4: -7
+        };
+    } else if (pred == "Auditory") {
+        var clickCounts = {
+            section1: -3,
+            section2: 0,
+            section3: -5,
+            section4: -7
+        };
+    } else if (pred == "Kinesthetic") {
+        var clickCounts = {
+            section1: -3,
+            section2: -5,
+            section3: 0,
+            section4: -7
+        };
+    } else if (pred == "Reading/Writing") {
+        var clickCounts = {
+            section1: -3,
+            section2: -5,
+            section3: -7,
+            section4: 0
+        };
+    }
+    sortSections();
+    // Function to increment click count for a section and re-sort sections
+    function incrementClickCount(sectionId) {
+        clickCounts[sectionId]++;
+        sortSections();
+    }
+
+    // Function to sort sections based on click counts
+    function sortSections() {
+        var sections = document.querySelectorAll("section");
+
+        // Convert NodeList to array for sorting
+        var sectionsArray = Array.from(sections);
+
+        // Sort sections based on click counts in descending order
+        sectionsArray.sort(function(a, b) {
+            var countA = clickCounts[a.id];
+            var countB = clickCounts[b.id];
+            return countB - countA;
+        });
+
+        // Remove existing sections from the DOM
+        sections.forEach(function(section) {
+            section.parentNode.removeChild(section);
+        });
+
+        // Append sorted sections to the container
+        sectionsArray.forEach(function(section) {
+            document.body.appendChild(section);
+        });
+    }
+</script>
+
+</body>
+</html>

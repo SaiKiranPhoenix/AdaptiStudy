@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Webpage with Sorted Sections</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            color: #008080;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #008080;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #004080;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>JAVA</h1>
+<section id="section1">
+    <h2>Video links...</h2>
+    <a href="https://www.youtube.com/watch?v=xk4_1vDrzzo" target="_blank" onclick="incrementClickCount('section1')">Bro code</a><br>
+    <a href="https://www.youtube.com/watch?v=BGTx91t8q50" target="_blank" onclick="incrementClickCount('section1')">Telusko</a><br>
+    <a href="https://www.youtube.com/watch?v=grEKMHGYyns" target="_blank" onclick="incrementClickCount('section1')">FreeCodeCamp.org</a><br>
+    <a href="https://www.youtube.com/watch?v=LC8wLYvJ9po" target="_blank" onclick="incrementClickCount('section1')">Intellipaat</a><br>
+    <a href="https://www.edx.org/search?q=java&tab=course" target="_blank" onclick="incrementClickCount('section1')">edX</a><br>
+</section>
+
+<section id="section2">
+    <h2>Podcast links...</h2>
+    <a href="https://www.podbean.com/podcast-detail/6mxhc-344f7/How-to-Program-with-Java-Podcast" target="_blank" onclick="incrementClickCount('section2')">Podbean</a><br>
+    <a href="https://www.javaoffheap.com/" target="_blank" onclick="incrementClickCount('section2')">javaoffheap</a><br>
+</section>
+
+<section id="section3">
+    <h2>Java Challenge links...</h2>
+    <a href="https://www.hackerrank.com/challenges/welcome-to-java/problem" target="_blank" onclick="incrementClickCount('section3')">hackerrank</a><br>
+    <a href="https://www.codingdojo.com/why-learn-java-programming" target="_blank" onclick="incrementClickCount('section3')">Coding dojo</a><br>
+    <a href="https://exercism.org/tracks/java" target="_blank" onclick="incrementClickCount('section3')">Exercism</a><br>
+</section>
+
+<section id="section4">
+    <h2>Content and notes links...</h2>
+    <a href="https://www.w3schools.com/java/" target="_blank" onclick="incrementClickCount('section4')">W3schools</a><br>
+    <a href="https://www.javatpoint.com/java-tutorial" target="_blank" onclick="incrementClickCount('section4')">JavaTpoint</a><br>
+    <a href="https://docs.oracle.com/javase/tutorial/" target="_blank" onclick="incrementClickCount('section4')">Oracle</a><br>
+</section>
+
+<script>
+    // ... (rest of your script remains unchanged)
+</script>
+
+</body>
+</html>

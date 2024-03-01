@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Style Predictor</title>
+</head>
+<body>
+    <h1>Learning Style Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="q1">On a scale of 1 to 5, how much do you rely on visual aids like diagrams, charts, or videos when learning new concepts?
+        </label><br>
+        <input type="range" name="Q1" min="1" max="5" required value="0"><br>
+
+        <label for="q2">Rate, on a scale of 1 to 5, how much you enjoy learning through listening to lectures or participating in discussions.
+        </label><br>
+        <input type="range" name="Q2" min="1" max="5" required value="0"><br>
+
+        <label for="q3"> Rate, on a scale of 1 to 5, how effective you find repeating information out loud for memory retention.
+        </label><br>
+        <input type="range" name="Q3" min="1" max="5" required value="0"><br>
+
+        <label for="q4"> When studying, how often do you use visual aids such as flashcards or mind maps? (1 to 5)
+        </label><br>
+        <input type="range" name="Q4" min="1" max="5" required value="0"><br>
+
+        <label for="q5"> How frequently do you engage in hands-on activities or physical movement while learning? Rate on a scale of 1 to 5.
+        </label><br>
+        <input type="range" name="Q5" min="1" max="5" required value="0"><br>
+
+        <label for="q6">On a scale of 1 to 5, how well do you understand and remember information when you physically interact with materials or objects?
+        </label><br>
+        <input type="range" name="Q6" min="1" max="5" required value="0"><br>
+
+        <label for="q7">How comfortable are you with learning through reading or writing activities? Rate on a scale of 1 to 5.
+        </label><br>
+        <input type="range" name="Q7" min="1" max="5" required value="0"><br>
+
+        <label for="q8">On a scale of 1 to 5, how often do you prefer to take notes by writing or reading written materials?</label><br>
+        <input type="range" name="Q8" min="1" max="5" required value="0"><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+</html>
